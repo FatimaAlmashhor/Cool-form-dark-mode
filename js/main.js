@@ -29,7 +29,7 @@ age.addEventListener('change', (event) => validAge(event));
 phone.addEventListener('change', (event) => validPhone(event));
 url.addEventListener('change', (event) => validUrl(event));
 massage.addEventListener('change', (event) => validMassage(event));
-confirm.addEventListener('click', (event) => {
+confirm.addEventListener('submit', (event) => {
     event.preventDefault()
     console.log('submit');
     for (const property in error) {
@@ -52,7 +52,8 @@ confirm.addEventListener('click', (event) => {
 
 // email valid
 function validName(event) {
-    event.preventDefault()
+    event.preventDefault();
+
     errorPointer.innerText = '';
     console.log(event.target.value.length)
     if (event.target.value.length >= 3 && event.target.value.length < 10) {
@@ -66,7 +67,8 @@ function validName(event) {
 
 // email valid
 function validEmail(event) {
-    event.preventDefault()
+    event.preventDefault();
+    errorPointer.innerText = '';
     let emailValid = event.target.value.toLowerCase()
         .match(
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -85,6 +87,7 @@ function validEmail(event) {
 //passwold valid 
 function validPassword(event) {
     event.preventDefault();
+    errorPointer.innerText = '';
     var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{6,})");
     console.log(event.target.value);
     if (event.target.value.match(strongRegex) !== null) {
@@ -102,6 +105,7 @@ function validPassword(event) {
 // confirm password valid 
 function validConfirmedPassword(event) {
     event.preventDefault();
+    errorPointer.innerText = '';
     console.log(password.value);
     if (password.target.value.length !== 0 && error.password === null) {
         if (event.target.value.match(strongRegex) === password.target.value) {
@@ -122,6 +126,7 @@ function validConfirmedPassword(event) {
 // age valid 
 function validAge(event) {
     event.preventDefault();
+    errorPointer.innerText = '';
     console.log(event.target.value);
     if (parseInt(event.target.value) > 18) {
         console.log(true);
@@ -135,6 +140,7 @@ function validAge(event) {
 // phone valid 
 function validPhone(event) {
     event.preventDefault();
+    errorPointer.innerText = '';
     console.log(event.target.value.slice(0, 3));
     if (event.target.value.slice(0, 3) === '777') {
         if (event.target.value.length === 9) {
@@ -157,6 +163,7 @@ function validPhone(event) {
 // url valid 
 function validUrl(event) {
     event.preventDefault();
+    errorPointer.innerText = '';
     const urlExp = new RegExp(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
     console.log(event.target.value.match(urlExp));
 
@@ -173,6 +180,7 @@ function validUrl(event) {
 // url Massage 
 function validMassage(event) {
     event.preventDefault();
+    errorPointer.innerText = '';
     console.log(event.target.value);
 
     if (event.target.value.length > 20) {
