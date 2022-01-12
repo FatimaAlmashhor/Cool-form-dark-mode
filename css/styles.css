@@ -4,6 +4,7 @@
   :root{
       --bg-color: #fff;
       --text-color : rgb(0, 0, 0);
+      --input-color: rgb(196, 196, 196);
   }
   body {
     display: flex;
@@ -17,7 +18,9 @@
     background-color: var(--bg-color);
   }
   body.dark {
-    background-color: #292c35;
+    --bg-color: #292c35;
+    --text-color: #fff;
+    --input-color: rgb(211, 211, 211);
   }
   .checkbox {
     opacity: 0;
@@ -30,10 +33,14 @@
   }
   form{
       margin: 30px;
+      width: 100%;
   }
-  input{
+  input  ,textarea{
       margin: 7px;
-      padding: 5px;
+      padding:8px;
+      width: 100%;
+      background-color: var(--input-color);
+      border: none;
   }
   .label {
     width: 50px;
@@ -76,4 +83,8 @@
       max-width: 50vw;
       display: flex;
       flex-direction: column;
+  }
+
+  button{
+      padding: 10px;
   }

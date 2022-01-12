@@ -2,5 +2,7 @@ const checkbox = document.getElementById('checkbox');
 
 checkbox.addEventListener('change', () => {
     document.body.classList.toggle('dark');
-    console.log('toggle');
+    let value = getComputedStyle(document.documentElement)
+        .setProperty('--text-color', '#fff');
+    console.log(value);
 })
