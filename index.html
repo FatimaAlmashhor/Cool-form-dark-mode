@@ -11,39 +11,47 @@
     <header>
         <h1>Cool form </h1>
         <p>Dear you not love me </p>
+        <div>
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="label">
+            <i class="fas fa-moon"></i>
+            <i class='fas fa-sun'></i>
+            <div class='ball'>
+          </label>
+        </div>
     </header>
     <main>
         <!-- the form -->
         <form id='confirm' target="hidden-iframe" >
-            <label>
+            <label class="title">
                 Name
                 <input type='text' id='name' required placeholder ="Enter your name"/>
             </label>
-            <label>
+            <label class="title">
                 Email
                 <input type='email'  value='' id='email'  required placeholder="Enter your email"/>
             </label>
-            <label>
+            <label class="title">
                 Password 
                 <input type='password'  value='' id='password' required  placeholder="Enter your password"/>
             </label>
-            <label>
+            <label class="title">
                 confirmed Password
                 <input type='password' id='confirmedPassword' required  placeholder="Enter your confirmed Password"/>
             </label>
-            <label>
+            <label class="title">
                 Age 
                 <input type='number' id='age' required  placeholder="Enter your Age "/>
             </label>
-            <label>
+            <label class="title">
                 Phone  
                 <input type='number' id='phone' required  placeholder="Enter your phone "/>
             </label>
-            <label>
+            <label class="title">
                 Url 
                 <input type='text' id='url' required  placeholder="Enter your url "/>
             </label>
-            <label>
+            <label class="title">
                 <textarea placeholder="Enter your massage "id='massage' ></textarea> 
             </label>
             <button  type='submit'  value="Submit" >Submit</button>
@@ -54,5 +62,6 @@
         <p id='errors'></p>
     </section>
     <script src="./js/main.js" ></script>
+    <script src="./js/darkMode.js" ></script>
 </body>
 </html>
