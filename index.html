@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Cool Form </title>
+</head>
+<body>
+    <header>
+        <h1>Cool form </h1>
+        <p>Dear you not love me </p>
+    </header>
+    <main>
+        <!-- the form -->
+        <form id='confirm' target="hidden-iframe" >
+            <label>
+                Name
+                <input type='text' id='name' required placeholder ="Enter your name"/>
+            </label>
+            <label>
+                Email
+                <input type='email'  value='' id='email'  required placeholder="Enter your email"/>
+            </label>
+            <label>
+                Password 
+                <input type='password'  value='' id='password' required  placeholder="Enter your password"/>
+            </label>
+            <label>
+                confirmed Password
+                <input type='password' id='confirmedPassword' required  placeholder="Enter your confirmed Password"/>
+            </label>
+            <label>
+                Age 
+                <input type='number' id='age' required  placeholder="Enter your Age "/>
+            </label>
+            <label>
+                Phone  
+                <input type='number' id='phone' required  placeholder="Enter your phone "/>
+            </label>
+            <label>
+                Url 
+                <input type='text' id='url' required  placeholder="Enter your url "/>
+            </label>
+            <label>
+                <textarea placeholder="Enter your massage "id='massage' ></textarea> 
+            </label>
+            <button  type='submit'  value="Submit" >Submit</button>
+
+        </form>
+    </main>
+    <section >
+        <p id='errors'></p>
+    </section>
+    <script src="./js/main.js" ></script>
+</body>
+</html>
